@@ -13,29 +13,30 @@ public class Toko {
 	ArrayList<Transaksi> daftarTransaksi = new ArrayList<Transaksi>();
 	
 	public Toko() {
-		//Pelanggan p = new Pelanggan();
-		//System.out.println(p.getNama());
 		menu();
-//		Scanner in = new Scanner(System.in);
+	}
+	
+	void contohTambahPelanggan() {
+		Scanner in = new Scanner(System.in);
 		// opsi 1
-//		Pelanggan p = new Pelanggan();
+		Pelanggan p = new Pelanggan();
 //		p.nama = in.nextLine();
 //		p.nomerTelpon = in.nextLine();
 //		p.alamat = in.nextLine();
-//		daftarPelanggan.add(p);
+		daftarPelanggan.add(p);
 		
 		// opsi 2
-//		p = new Pelanggan();
-//		p.baca();
-//		daftarPelanggan.add(p);
+		p = new Pelanggan();
+		p.baca();
+		daftarPelanggan.add(p);
 		
 		// opsi 3
-//		p = new Pelanggan(in);
-//		daftarPelanggan.add(p);
+		p = new Pelanggan(in);
+		daftarPelanggan.add(p);
 		
-//		daftarPelanggan.add(new Pelanggan(in));
+		daftarPelanggan.add(new Pelanggan(in));
 		
-//		in.close();
+		in.close();
 	}
 	
 	void menu() {
@@ -127,7 +128,8 @@ public class Toko {
 	
 
 	public static void main(String[] args) {
-		Toko t = new Toko();
+		new Toko();
+//		Toko t = new Toko();
 //		t.nama = "Ini toko Budi";
 //		Toko t2 = new Toko();
 //		t2.nama = "ini toko Andi";

@@ -44,6 +44,7 @@ public class MainClass {
 				System.out.println(c.alamat);
 			}
 		}
+		in.close();
 	}
 
 	public static void main(String[] args) {
