@@ -6,5 +6,6 @@
 3. [TheMinAngleOfClock](src/TheMinAngleOfClock.java)
 4. [TheRankOfGPA v1](src/RankOfGPA.java)
 5. [TheRankOfGPA v2](src/TheRankOfGPA.java)
+6. [Introduce to Object-riented](src/ppti/oop/session02/MainClass.java)
 ## Session 3
 [Source Code](src/ppti/oop/session03)
