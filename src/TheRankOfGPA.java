@@ -14,10 +14,10 @@ public class TheRankOfGPA {
 			gpa.add(d);
 		}
 		gpa.sort(Comparator.reverseOrder());
-		int rank=0, i=0;
+		int rank = 0, i = 0;
 		for (Double d : gpa) {
 //			System.out.println(gpa.get(rank)+" - "+d);
-			if(!gpa.get(rank).equals(d)) {
+			if (!gpa.get(rank).equals(d)) {
 				rank = i;
 			}
 			System.out.printf("%d %.2f\n", rank, d);

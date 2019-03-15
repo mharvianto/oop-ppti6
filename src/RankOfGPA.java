@@ -13,9 +13,9 @@ public class RankOfGPA {
 		}
 		Arrays.sort(gpa, 0, n);
 		int rank = 1;
-		for (int i = n-1; i >= 0; i--) {
-			if(gpa[i] != gpa[i+1]) {
-				rank = n-i;
+		for (int i = n - 1; i >= 0; i--) {
+			if (gpa[i] != gpa[i + 1]) {
+				rank = n - i;
 			}
 			System.out.printf("%d %.2f\n", rank, gpa[i]);
 		}

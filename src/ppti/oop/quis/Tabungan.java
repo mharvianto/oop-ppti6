@@ -3,8 +3,15 @@ package ppti.oop.quis;
 import java.util.ArrayList;
 
 public class Tabungan extends Layanan {
-	private String noRekening = "";
-	private ArrayList<Transaksi> transaksiList = new ArrayList<Transaksi>();
+	private String noRekening;
+	private ArrayList<Transaksi> transaksiList;
+
+	public Tabungan() {
+		this.saldo = 0;
+		this.bunga = 4;
+		this.noRekening = "";
+		this.transaksiList = new ArrayList<Transaksi>();
+	}
 
 	public String getNoRekening() {
 		return noRekening;
@@ -30,5 +37,23 @@ public class Tabungan extends Layanan {
 		super.tarik(nominal);
 		Transaksi tr = new Transaksi(new Date(), nominal, "DB");
 		transaksiList.add(tr);
+	}
+
+	public void viewTransaksi() {
+		for (Transaksi transaksi : transaksiList) {
+			System.out.println(transaksi);
+		}
+	}
+
+	@Override
+	public String toString() {
+		String str = String.format("Tabungan %s - %d", noRekening, saldo);
+		if(!transaksiList.isEmpty()) {
+			str += "\nDaftar Transaksi";
+			for (Transaksi transaksi : transaksiList) {
+				str += "\n" + transaksi;
+			}
+		}
+		return str;
 	}
 }

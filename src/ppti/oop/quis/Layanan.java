@@ -4,6 +4,11 @@ public class Layanan {
 	protected long saldo;
 	protected double bunga;
 
+	public Layanan() {
+		this.saldo = 0;
+		this.bunga = 0;
+	}
+
 	public long getSaldo() {
 		return saldo;
 	}

@@ -10,7 +10,7 @@ public class Date {
 	public Date() {
 		Calendar cal = Calendar.getInstance();
 		tanggal = cal.get(Calendar.DAY_OF_MONTH);
-		bulan = cal.get(Calendar.MONTH);
+		bulan = cal.get(Calendar.MONTH) + 1;
 		tahun = cal.get(Calendar.YEAR);
 	}
 

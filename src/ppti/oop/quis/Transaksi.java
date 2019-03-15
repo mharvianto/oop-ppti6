@@ -26,6 +26,6 @@ public class Transaksi {
 
 	@Override
 	public String toString() {
-		return String.format("%s - %10d - %s", tanggal, nominal, status);
+		return String.format("%s - %12d - %s", tanggal, nominal, status);
 	}
 }

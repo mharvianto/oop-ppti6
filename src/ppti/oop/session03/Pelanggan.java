@@ -12,51 +12,56 @@ public class Pelanggan {
 	private String nama;
 	private String nomerTelpon;
 	private String alamat;
-	
+
 	/**
 	 * getter dari nama
+	 * 
 	 * @return nama
 	 */
 	public String getNama() {
 		return nama;
 	}
-	
+
 	/**
-	 * getter dari Nomer Telpon 
+	 * getter dari Nomer Telpon
+	 * 
 	 * @return nomer telpon
 	 */
 	public String getNomerTelpon() {
 		return nomerTelpon;
 	}
-	
+
 	/**
 	 * setter dari Nomer Telpon
+	 * 
 	 * @param nomerTelponBaru
 	 * @throws IllegalArgumentException
 	 */
 	public void setNomerTelpon(String nomerTelponBaru) throws IllegalArgumentException {
-		if(nomerTelponBaru.length() > 15)
+		if (nomerTelponBaru.length() > 15)
 			throw new IllegalArgumentException("Panjang maksimal 15 karakter");
-		if(nomerTelponBaru.length() < 10)
+		if (nomerTelponBaru.length() < 10)
 			throw new IllegalArgumentException("Panjang minimal 10 karakter");
 		this.nomerTelpon = nomerTelponBaru;
 	}
-	
+
 	/**
 	 * getter dari alamat
+	 * 
 	 * @return alamat
 	 */
 	public String getAlamat() {
 		return alamat;
 	}
-	
+
 	/**
 	 * setter dari alamat
+	 * 
 	 * @param alamat
 	 * @throws IllegalArgumentException
 	 */
 	public void setAlamat(String alamat) throws IllegalArgumentException {
-		if(alamat.length() > 50)
+		if (alamat.length() > 50)
 			throw new IllegalArgumentException("Panjang Alamat lebih kecil dari 50 karakter");
 		this.alamat = alamat;
 	}
@@ -72,6 +77,7 @@ public class Pelanggan {
 
 	/**
 	 * constructor dengan parameter Scanner
+	 * 
 	 * @param in
 	 */
 	public Pelanggan(Scanner in) {
@@ -85,7 +91,7 @@ public class Pelanggan {
 				error = false;
 				System.out.print("Masukkan nomer telpon[10..15]: ");
 				setNomerTelpon(in.nextLine());
-			}catch (Exception e) {
+			} catch (Exception e) {
 				System.out.println(e.getMessage());
 				error = true;
 			}
@@ -106,9 +112,11 @@ public class Pelanggan {
 		alamat = in.nextLine();
 		in.close();
 	}
-	
+
 	/**
-	 * method/fungsi untuk menampilkan menu dengan parametter class Scanner dan class Arraylist&ltPelanggan&gt
+	 * method/fungsi untuk menampilkan menu dengan parametter class Scanner dan
+	 * class Arraylist&ltPelanggan&gt
+	 * 
 	 * @param in
 	 * @param daftarP
 	 */
@@ -116,30 +124,31 @@ public class Pelanggan {
 		int input = 0;
 		do {
 			try {
-				System.out.print("Menu Pelanggan\n" +
-						"1. Tambah pelanggan\n" +
-						"2. Lihat pelanggan\n" +
-						"3. Ubah pelanggan\n" +
-						"4. Hapus pelanggan\n" +
-						"5. Back\n" +
-						"Input: ");
+				System.out.print("Menu Pelanggan\n" + "1. Tambah pelanggan\n" + "2. Lihat pelanggan\n"
+						+ "3. Ubah pelanggan\n" + "4. Hapus pelanggan\n" + "5. Back\n" + "Input: ");
 				input = in.nextInt();
-			}catch (Exception e) {
+			} catch (Exception e) {
 				input = 0;
 			}
 			in.nextLine();
 			switch (input) {
-			case 1: daftarP.add(new Pelanggan(in)); break;
-			//toko.daftarPelanggan.add(new Pelanggan(in));
-			case 2: lihat(daftarP); break;
+			case 1:
+				daftarP.add(new Pelanggan(in));
+				break;
+			// toko.daftarPelanggan.add(new Pelanggan(in));
+			case 2:
+				lihat(daftarP);
+				break;
 			default:
 				break;
 			}
-		}while(input != 5);
+		} while (input != 5);
 	}
-	
+
 	/**
-	 * method/fungsi untuk menampilkan menu dengan parameter class Scanner dan class Toko
+	 * method/fungsi untuk menampilkan menu dengan parameter class Scanner dan class
+	 * Toko
+	 * 
 	 * @param in
 	 * @param toko
 	 */
@@ -147,52 +156,47 @@ public class Pelanggan {
 		int input = 0;
 		do {
 			try {
-				System.out.print("Menu Pelanggan\n" +
-						"1. Tambah pelanggan\n" +
-						"2. Lihat pelanggan\n" +
-						"3. Ubah pelanggan\n" +
-						"4. Hapus pelanggan\n" +
-						"5. Back\n" +
-						"Input: ");
+				System.out.print("Menu Pelanggan\n" + "1. Tambah pelanggan\n" + "2. Lihat pelanggan\n"
+						+ "3. Ubah pelanggan\n" + "4. Hapus pelanggan\n" + "5. Back\n" + "Input: ");
 				input = in.nextInt();
-			}catch (Exception e) {
+			} catch (Exception e) {
 				input = 0;
 			}
 			in.nextLine();
 			switch (input) {
-			case 1: toko.daftarPelanggan.add(new Pelanggan(in)); break;
-			case 2: Pelanggan.lihat(toko.daftarPelanggan); break;
+			case 1:
+				toko.daftarPelanggan.add(new Pelanggan(in));
+				break;
+			case 2:
+				Pelanggan.lihat(toko.daftarPelanggan);
+				break;
 			default:
 				break;
 			}
-		}while(input != 5);
+		} while (input != 5);
 	}
-	
+
 	/**
 	 * method/fungsi untuk menampilkan data dari Class Pelanggan
 	 */
 	void lihat() {
 		System.out.printf("%20s | %15s | %20s\n", nama, nomerTelpon, alamat);
 	}
-	
+
 	/**
-	 * method/fungsi untuk menampilkan seluruh data Pelanggan dari ArrayList&ltPelangan&gt
+	 * method/fungsi untuk menampilkan seluruh data Pelanggan dari
+	 * ArrayList&ltPelangan&gt
+	 * 
 	 * @param daftarP
 	 */
 	static void lihat(ArrayList<Pelanggan> daftarP) {
-		if(daftarP.isEmpty()) {
+		if (daftarP.isEmpty()) {
 			System.out.println("Tidak ada data.");
 		} else {
 			System.out.printf("%20s | %15s | %20s\n", "Nama", "Nomer Telpon", "Alamat");
-			for (Pelanggan p: daftarP) {
+			for (Pelanggan p : daftarP) {
 				p.lihat();
 			}
 		}
 	}
 }
-
-
-
-
-
-
