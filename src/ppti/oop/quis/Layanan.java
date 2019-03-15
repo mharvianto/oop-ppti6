@@ -13,10 +13,6 @@ public class Layanan {
 		return saldo;
 	}
 
-	public void setSaldo(long saldo) {
-		this.saldo = saldo;
-	}
-
 	public double getBunga() {
 		return bunga;
 	}

@@ -47,12 +47,7 @@ public class MainClass {
 	}
 
 	public static void main(String[] args) {
-		MainClass mc = new MainClass();
-		try {
-			MainClass a = (MainClass) mc.clone();
-		} catch (CloneNotSupportedException e) {
-			e.printStackTrace();
-		}
+		new MainClass();
 	}
 
 }

@@ -1,3 +1,4 @@
+package ppti.oop.sl01;
 import java.util.Arrays;
 import java.util.Scanner;
 
