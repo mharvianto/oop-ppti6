@@ -39,7 +39,7 @@ public class Tabungan extends Layanan {
 		transaksiList.add(tr);
 	}
 
-	public void viewTransaksi() {
+	public void lihatTransaksi() {
 		for (Transaksi transaksi : transaksiList) {
 			System.out.println(transaksi);
 		}

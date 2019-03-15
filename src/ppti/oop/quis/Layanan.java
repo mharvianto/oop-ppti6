@@ -25,7 +25,7 @@ public class Layanan {
 		saldo += nominal;
 	}
 
-	public long calculateBunga() {
+	public long hitungBunga() {
 		return (long) ((bunga / 100.0) / 12.0 * saldo);
 	}
 

@@ -26,8 +26,8 @@ public class Bank {
 		
 		kevin.viewLayanan();
 		
-		System.out.println("Bunga Tabungan: " + t.calculateBunga());
-		System.out.println("Bunga Deposito: " + d.calculateBunga());
+		System.out.println("Bunga Tabungan: " + t.hitungBunga());
+		System.out.println("Bunga Deposito: " + d.hitungBunga());
 	}
 
 }

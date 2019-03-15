@@ -33,8 +33,8 @@ public class Deposito extends Layanan {
 	}
 	
 	@Override
-	public long calculateBunga() {
-		return super.calculateBunga() * jangkaWaktu;
+	public long hitungBunga() {
+		return super.hitungBunga() * jangkaWaktu;
 	}
 	
 	@Override
