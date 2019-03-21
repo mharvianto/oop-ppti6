@@ -48,7 +48,7 @@ public class Tabungan extends Layanan {
 	@Override
 	public String toString() {
 		String str = String.format("Tabungan %s - %d", noRekening, saldo);
-		if(!transaksiList.isEmpty()) {
+		if (!transaksiList.isEmpty()) {
 			str += "\nDaftar Transaksi";
 			for (Transaksi transaksi : transaksiList) {
 				str += "\n" + transaksi;

@@ -8,8 +8,10 @@ public class Nasabah {
 	private Date tanggalLahir;
 	private ArrayList<Layanan> layananList = new ArrayList<Layanan>();
 
+	public Nasabah() {
+	}
+
 	public Nasabah(String nama, String nik, Date tanggalLahir) {
-		super();
 		this.nama = nama;
 		this.nik = nik;
 		this.tanggalLahir = tanggalLahir;

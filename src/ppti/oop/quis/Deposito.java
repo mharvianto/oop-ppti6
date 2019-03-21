@@ -31,12 +31,12 @@ public class Deposito extends Layanan {
 	public Date getTanggalBuka() {
 		return tanggalBuka;
 	}
-	
+
 	@Override
 	public long hitungBunga() {
 		return super.hitungBunga() * jangkaWaktu;
 	}
-	
+
 	@Override
 	public String toString() {
 		return String.format("Deposito %d bulan - %12d - %s", jangkaWaktu, saldo, tanggalBuka);
