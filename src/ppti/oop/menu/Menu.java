@@ -8,20 +8,21 @@ public abstract class Menu {
 	private String title = null;
 	private String[] menus = null;
 	private ArrayList<Operation> operations = new ArrayList<Operation>();
-	
+
 	public Menu(String title, String[] menus) {
 		this.title = title;
 		this.menus = menus;
 		initOperation();
-		if(menus.length == operations.size())inputMenu();
+		if (menus.length == operations.size())
+			inputMenu();
 	}
-	
+
 	protected abstract void initOperation();
-	
+
 	protected final void addOperation(Operation op) {
 		operations.add(op);
 	}
-	
+
 	private final void inputMenu() {
 		int input = 0;
 		do {
@@ -34,17 +35,17 @@ public abstract class Menu {
 			System.out.print("Input: ");
 			try {
 				input = in.nextInt();
-			}catch(Exception e) {
+			} catch (Exception e) {
 				input = 0;
 			}
 			in.nextLine();
-			if(0 < input && input < operations.size()) {
-				operations.get(input-1).doOpertaion();
+			if (0 < input && input <= operations.size()) {
+				operations.get(input - 1).doOpertaion();
 			}
-		}while(input != operations.size());
+		} while (input != operations.size());
 	}
-	
-	private void clearScreen() {
+
+	private final void clearScreen() {
 		for (int i = 0; i < 50; i++) {
 			System.out.println();
 		}
